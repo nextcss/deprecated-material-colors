@@ -1,6 +1,6 @@
 {
   "name": "@nextcss/material-colors",
-  "version": "0.1.0-beta",
+  "version": "0.1.1-beta",
   "description": "material-colors module for Next.css.",
   "license": "MIT",
   "main": "dist/material-colors.css",
@@ -34,6 +34,6 @@
     "build:test": "node-sass --output-style compact src/material-colors.scss test/material-colors.css"
   },
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^6.0.1"
   }
 }
