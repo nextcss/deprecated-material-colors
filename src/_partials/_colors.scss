@@ -18,20 +18,24 @@ $states: (
   @each $scale, $color in $list {
     @each $query, $prop in $properties {
       @if $scale == 'base' {
-        .#{$query}-#{$name} {
+        .#{$query}-#{$name},
+        .dark .dark\:#{$query}-#{$name} {
           #{$prop}: $color;
         }
         @each $prefix, $state in $states {
-          .#{$prefix}\:#{$query}-#{$name}:#{$state} {
+          .#{$prefix}\:#{$query}-#{$name}:#{$state},
+          .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
             #{$prop}: $color;
           }
         }
       } @else {
-        .#{$query}-#{$name}-#{$scale} {
+        .#{$query}-#{$name}-#{$scale},
+        .dark .dark\:#{$query}-#{$name}-#{$scale} {
           #{$prop}: $color;
         }
         @each $prefix, $state in $states {
-          .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+          .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
+          .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
             #{$prop}: $color;
           }
         }
