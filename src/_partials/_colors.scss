@@ -23,9 +23,18 @@ $states: (
           #{$prop}: $color;
         }
         @each $prefix, $state in $states {
-          .#{$prefix}\:#{$query}-#{$name}:#{$state},
-          .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
-            #{$prop}: $color;
+          @if $state == 'hover' {
+            @media (hover: hover) and (pointer: fine) {
+              .#{$prefix}\:#{$query}-#{$name}:#{$state},
+              .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
+                #{$prop}: $color;
+              }
+            }
+          } @else {
+            .#{$prefix}\:#{$query}-#{$name}:#{$state},
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
+              #{$prop}: $color;
+            }
           }
         }
       } @else {
@@ -34,9 +43,18 @@ $states: (
           #{$prop}: $color;
         }
         @each $prefix, $state in $states {
-          .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
-          .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
-            #{$prop}: $color;
+          @if $state == 'hover' {
+            @media (hover: hover) and (pointer: fine) {
+              .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
+              .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+                #{$prop}: $color;
+              }
+            }
+          } @else {
+            .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+              #{$prop}: $color;
+            }
           }
         }
       }
