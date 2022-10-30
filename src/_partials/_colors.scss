@@ -30,6 +30,11 @@ $states: (
                 #{$prop}: $color;
               }
             }
+
+            .#{$prefix}\:#{$query}-#{$name}:active,
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}:active {
+              #{$prop}: $color;
+            }
           } @else {
             .#{$prefix}\:#{$query}-#{$name}:#{$state},
             .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
@@ -49,6 +54,11 @@ $states: (
               .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
                 #{$prop}: $color;
               }
+            }
+
+            .#{$prefix}\:#{$query}-#{$name}-#{$scale}:active,
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:active {
+              #{$prop}: $color;
             }
           } @else {
             .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
